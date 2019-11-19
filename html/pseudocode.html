@@ -1,0 +1,20 @@
+this app allows he user to save events for each hour of the day in local storage. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery
+    
+display current date/time at top of page using moment().format('');
+
+create var workHours array to hold 9am - 5pm (use military time and append as 12hr time??)
+
+create var now to store system time (check moment documentation)
+
+forloop workHours to append array values to div/row/column 1 (showing work times)
+
+if/else to compare work hours array against now.hour (also moment () )
+    if now.hour == workHours[i], append green (current time)
+    else if now.hour > workHours[i], append purple, (past time)
+    else if now.hour < workHours[i], append gold (future time)
+
+div/row/column 2: text boxes 
+
+each time div has a save button
+
+save button .on(click) stores time and user schedule input in local storage
