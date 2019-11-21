@@ -1,22 +1,26 @@
 // Variables
 var workHours = [9, 10, 11, 12, 1, 2, 3, 4, 5];
-var now = moment().format("dddd, MMMM Do");
+var rightNow = moment().format("dddd, MMMM Do");
 
 // Functions
-function planner() { 
-    for (i = 0; i < workHours.length; i++) {
-         var div = $("<div>").text(workHours[i]);
-         $(".planner").append(div);
-        
-   }
-}
-planner();
 
+//jumbtoron current day display
 function currentDay() {
-   var jumbotronDiv = $("<div>").text(now);
+   var jumbotronDiv = $("<div>").text(rightNow);
    document.getElementById("currentDay");
    $("#currentDay").append(jumbotronDiv); 
 }
 currentDay();
 
-console.log(now);
+//col 1 workHours display
+function hours() { 
+    for (i = 0; i < workHours.length; i++) {
+         var hourDisplay = $("<div>").text(workHours[i]);
+         document.getElementById("hours");
+         $("#hours").append(hourDisplay); 
+   }
+}
+hours();
+
+
+
