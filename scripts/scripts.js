@@ -1,6 +1,6 @@
 // Variables
 var workHours = [9, 10, 11, 12, 1, 2, 3, 4, 5];
-var now = moment().format;
+var now = moment().format("dddd, MMMM Do");
 
 // Functions
 function planner() { 
@@ -13,9 +13,10 @@ function planner() {
 planner();
 
 function currentDay() {
-   var jumbotronDiv = $("<div>").text(now.hour);
+   var jumbotronDiv = $("<div>").text(now);
+   document.getElementById("currentDay");
    $("#currentDay").append(jumbotronDiv); 
 }
 currentDay();
 
-console.log(now.hour);
+console.log(now);
