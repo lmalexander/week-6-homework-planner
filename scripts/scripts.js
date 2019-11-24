@@ -16,23 +16,23 @@ console.log(workHours[4].twelve);
 // Functions
 //jumbotron current day display
 function currentDay() {
-   var jumbotronDiv = $("<div>").text(todayDate);
+   var jumbotronDate = $("<div>").text(todayDate);
    document.getElementById("currentDay");
-   $("#currentDay").append(jumbotronDiv); 
-}
+   $("#currentDay").append(jumbotronDate); 
+};
 currentDay();
 
 //col 1 workHours display
 
 function hours () {
    for (i = 0; i < workHours.length; i++) {
-      var row = $("<tr/>");
-      for (i = 0; i < workHours[i].length; i++) {
-         var hourDisplay = $("<div>").text(workHours[i].twelve);
-         document.getElementById("hours").append(hourDisplay);
-      }
+      //for (i = 0; i < workHours[i].length; i++) {
+         var hourDisplay = $("<tr>").text(workHours[i].twelve);
+         //var row = $("<tr>"); 
+         document.getElementById("planner").append(hourDisplay);
+      //}
    }
-}
+};
 hours();
 
 
