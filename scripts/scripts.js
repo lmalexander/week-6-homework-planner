@@ -24,10 +24,11 @@ currentDay();
 
 //col 1 workHours display
 
+
 function hours () {
    for (i = 0; i < workHours.length; i++) {
       //for (i = 0; i < workHours[i].length; i++) {
-         var hourDisplay = $("<tr>").text(workHours[i].twelve);
+         var hourDisplay = $("<tr>").text(workHours);
          //var row = $("<tr>"); 
          document.getElementById("planner").append(hourDisplay);
       //}
