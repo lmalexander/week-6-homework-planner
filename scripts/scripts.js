@@ -16,7 +16,7 @@ console.log(workHours24[5]);
 
 // / Functions
 
-//jumbotron current day display
+// jumbotron current day display
 function currentDay() {
    var jumbotronDate = $("<div>").text(todayDate);
    document.getElementById("currentDay");
@@ -24,30 +24,29 @@ function currentDay() {
 };
 currentDay();
 
-//col 1 workHours display
-function hours () {
-   for (var i = 0; i < workHours.length; i++) {
-         var hourDisplay = $("<div>").text(workHours[i]);
-         document.getElementById("plannerRows").append(hourDisplay);
-      }
-   };
+// workHours12 loop append to #hour
+function hours() {
+for (var i=0; i < workHours12.length; i++) {
+   // create table rows
+   tableRow = $("<tr>").addClass("plannerRows");
+   // create hours table cell
+   hoursCell = $("<td>").addClass("hoursCell").text(workHours12[i]);
+   // create user input table cell
+   // create save button
+   // append hours, user input, and save button to table row
+   tableRow.append(hoursCell);
+   // append table row to planner
+   document.getElementById("#workHoursPlanner").append(tableRow).html;
+   }
+};
 hours();
 
 
-//function hours() { 
-    //for (i = 0; i < workHours.length; i++) {
- //      for (i=0; i < Object.length; i++) {
- //         var hourDisplay = $("<div>").text(workHours.twelve);
- //         document.getElementById("hours");
- //        $("#hours").append(hourDisplay); 
-  //     }
 
 
-   //      var hourDisplay = $("<div>").text(workHours[i]);
-         
-  // }
-//}
-//hours();
+
+
+
 
 // text boxes
 //function textBoxes () {

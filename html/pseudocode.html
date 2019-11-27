@@ -4,21 +4,27 @@ brief:
   
 display current date/time at top of page using moment().format('');
 
-create var workHours array to hold 9am - 5pm (use military time and append as 12hr time?? how do i solve this problem)
+create var workHours12 array to hold 9am - 5pm (use military time and append as 12hr time?? how do i solve this problem -> yes)
+
+compares current time to workHours24[i], displays corresponding workHours12[i]
 
 create todayDate to store system time in #currentDay using function currentDay (check moment documentation)
 
-forloop workHours to append values to #hours (showing work times)
+for loop: 
+create a table row for each workHours12[i]
 
-create table using AJAX from json object
+append workHours12[i] values to #hours (showing work times)
 
-if/else to compare #hours against rightNow
-    if rightNow == workHours[i], append green (current time)
-    else if rightNow > workHours[i], append purple, (past time)
-    else if rightNow < workHours[i], append gold (future time)
+create a text box with user inputs 
 
-div/row/column 2: text boxes 
+create a button + click event to save user input to localStorage
 
-each time div has a save button
+if/else to compare workHours12 against workHours24
 
-save button .on(click) stores time and user schedule input in local storage
+    if workHours12[i] == workHours24[i], append green (current time)
+    else if workHours12 > workHours24[i], append purple, (past time)
+    else if workHours12[i] < workHours24[i], append gold (future time)
+
+save inputs to localStorage
+
+pull & display elements from localStorage

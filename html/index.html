@@ -18,14 +18,16 @@
 </head>
 
 <body>
+  <!--currentDay jumbotron-->
     <header class="jumbotron">
         <h1 class="display-3">Work Day Scheduler</h1>
         <p class="lead">A simple calendar app for scheduling your work day</p>
         <p id="currentDay" class="lead"></p>
     </header>
 
+  <!--planner ui-->
     <div class="container">
-      <table class="table" id="planner">
+      <table class="table">
         <thead>
           <tr>
             <th scope="col">Time</th>
@@ -33,50 +35,7 @@
             <th scope="col">Save</th>
           </tr>
         </thead>
-        <tbody id="plannerRows">
-          <tr>
-            <td class="col-lg-2" id="hour">Hour </td>
-            <td class="col-lg-8" id="userInput"> Input </td>
-            <td class="col-lg-2" id="saveBtn"> Button</td>
-          </tr>
-          <tr>
-              <td class="col-lg-2" id="hour">Hour </td>
-              <td class="col-lg-8" id="userInput"> Input </td>
-              <td class="col-lg-2" id="saveBtn"> Button</td>
-          </tr>
-          <tr>
-            <td class="col-lg-2" id="hour">Hour </td>
-            <td class="col-lg-8" id="userInput"> Input </td>
-            <td class="col-lg-2" id="saveBtn"> Button</td>
-          </tr>
-          <tr>
-              <td class="col-lg-2" id="hour">Hour </td>
-              <td class="col-lg-8" id="userInput"> Input </td>
-              <td class="col-lg-2" id="saveBtn"> Button</td>
-            </tr>
-          <tr>
-            <td class="col-lg-2" id="hour">Hour </td>
-            <td class="col-lg-8" id="userInput"> Input </td>
-            <td class="col-lg-2" id="saveBtn"> Button</td>
-          </tr>
-          <tr>
-              <td class="col-lg-2" id="hour">Hour </td>
-              <td class="col-lg-8" id="userInput"> Input </td>
-              <td class="col-lg-2" id="saveBtn"> Button</td>
-            </tr>
-          <tr>
-            <td class="col-lg-2" id="hour">Hour </td>
-            <td class="col-lg-8" id="userInput"> Input </td>
-            <td class="col-lg-2" id="saveBtn"> Button</td>
-          </tr>
-          <tr>
-              <td class="col-lg-2" id="hour">Hour </td>
-              <td class="col-lg-8" id="userInput"> Input </td>
-              <td class="col-lg-2" id="saveBtn"> Button</td>
-            </tr>  
-          
-
-        </tbody>
+        <tbody class="planner" id="workHoursPlanner"></tbody>
 
       </table>
     </div>
