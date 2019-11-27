@@ -1,19 +1,21 @@
-// Variables
-var todayDate = moment().format("dddd, MMMM Do");
-var workHours = [
-   {twelve: "9am" , twentyFour: "9"},
-   {twelve: "10am" , twentyFour: "10"},
-   {twelve: "11am" , twentyFour: "11"},
-   {twelve: "12pm" , twentyFour: "12"},
-   {twelve: "1pm" , twentyFour: "13"},
-   {twelve: "2pm" , twentyFour: "13"},
-   {twelve: "3pm" , twentyFour: "14"},
-   {twelve: "4pm" , twentyFour: "15"},
-   {twelve: "5pm" , twentyFour: "16"},
-];
-console.log(workHours[4].twelve);
+// / Variables
 
-// Functions
+// jumbotron today date
+var todayDate = moment().format("dddd, MMMM Do");
+
+// displays in col Time
+var workHours12 = ["9am", "10am" , "11am","12pm","1pm","2pm","3pm","4pm","5pm"];
+
+// compares to current time to determine past present & future 
+var workHours24 = ["9", "10", "11", "12", "13", "14", "15", "16"];
+
+// should print 2pm & 14
+console.log(workHours12[5]);
+console.log(workHours24[5]);
+
+
+// / Functions
+
 //jumbotron current day display
 function currentDay() {
    var jumbotronDate = $("<div>").text(todayDate);
@@ -23,17 +25,12 @@ function currentDay() {
 currentDay();
 
 //col 1 workHours display
-
-
 function hours () {
-   for (i = 0; i < workHours.length; i++) {
-      //for (i = 0; i < workHours[i].length; i++) {
-         var hourDisplay = $("<tr>").text(workHours);
-         //var row = $("<tr>"); 
-         document.getElementById("planner").append(hourDisplay);
-      //}
-   }
-};
+   for (var i = 0; i < workHours.length; i++) {
+         var hourDisplay = $("<div>").text(workHours[i]);
+         document.getElementById("plannerRows").append(hourDisplay);
+      }
+   };
 hours();
 
 
